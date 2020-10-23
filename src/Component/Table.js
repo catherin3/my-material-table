@@ -6,15 +6,19 @@ export const Table =()=> {
         {name: 'Josh', age: 12},
         {name: 'Tom', age: 21},
         {name: 'Andy', age: 37},
-        {name: 'Amanda', age: 20}
+        {name: 'Amanda', age: 20},
+        {name: 'Andie', age: 40},
+        {name: 'Amos', age: 32},
+        {name: 'Arial', age: 50},
+        {name: 'Ameila', age: 10},
     ]
 
     const columns = [
         {
-            title: 'Name:', field: 'name'
+            title: 'Name', field: 'name'
         },
         {
-            title: 'Age:', field: 'age'
+            title: 'Age', field: 'age'
         },
     ]
     return (
@@ -22,6 +26,9 @@ export const Table =()=> {
             <MaterialTable title="Material Table"
                 data= {data}
                 columns ={columns}
+                options={{
+                    exportButton: true  
+                }}
         
             />
         </div>

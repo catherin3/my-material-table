@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from './Component/Table'
+import Table from './Component/MaterialTableEx1/Index'
 import './App.css';
 
 function App() {
