@@ -5,7 +5,7 @@ const Table = props => {
   const [gridData, setGridData] = useState({
     data: props.data,
     columns: props.col,
-    resolve: () => {},
+    resolve: () => { },
     updatedAt: new Date()
   });
 
@@ -46,9 +46,9 @@ const Table = props => {
 
   return (
     <>
-    {
-      console.log(props.data)
-    }
+      {
+        console.log(props.data)
+      }
       <MaterialTable
         title="Your Title"
         columns={gridData.columns}
@@ -61,7 +61,17 @@ const Table = props => {
           onRowDelete: onRowDelete
         }}
         options={{
-            exportButton: true
+          exportButton: true,
+          grouping: true,
+          selection: true,
+          headerStyle: {
+            backgroundColor: '#01579b',
+            color: '#FFF'
+          },
+          rowStyle: {
+            backgroundColor: '#EEE',
+          }
+
         }}
       />
     </>
